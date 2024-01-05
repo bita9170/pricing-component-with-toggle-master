@@ -9,6 +9,7 @@
   --clr-LightGrayishBlue: hsl(234, 14%, 74%);
   --clr-grayishblue: hsl(233, 13%, 49%);
   --clr-DarkGrayishBlue: hsl(232, 13%, 33%);
+  --clr-LinearGradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
 }
 
 *,
@@ -20,5 +21,57 @@
 }
 
 body {
-  background-image: url("./assets/images/bg-top.svg");
+  background-image: url("./assets/images/bg-top.svg"),
+    url("./assets/images/bg-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: top right ,left top;
+  background-color: var(--clr-verylightgrayishblue);
+}
+
+header {
+ h1 {
+   color: var(--clr-DarkGrayishBlue);
+   text-align: center;
+   margin: 2rem 0;
+ }
+ .toggle-button {
+  width: 50px;
+  height: 25px;
+  background-color: var(--clr-LightGrayishBlue);
+  margin: 0 auto;
+  border-radius: 12.5px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slider {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  transition: transform 0.3s;
+}
+
+.toggle-button.on {
+  background-color: hsl(236, 72%, 79%);
+}
+
+.toggle-button.on .slider {
+  transform: translateX(25px);
+}
+
+.toggle-button.off {
+  background-color: hsl(237, 63%, 64%);
+}
+
+.toggle-button.off .slider {
+  transform: translateX(0);
+}
+
+
+
 }
