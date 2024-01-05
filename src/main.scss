@@ -1,6 +1,5 @@
 :root {
-  --ff-sans: 'Montserrat', sans-serif;
-
+  --ff-sans: "Montserrat", sans-serif;
 
   --fs-500: 0.938rem;
 
@@ -18,4 +17,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-image: url("./assets/images/bg-top.svg");
 }
