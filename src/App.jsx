@@ -10,13 +10,15 @@ function App() {
   return (
     <header>
       <h1>Our Pricing</h1>
-      <div>
+      <div className="toggle-container">
+        <p>Annually</p>
         <div
           className={`toggle-button ${isOn ? "on" : "off"}`}
           onClick={toggle}
         >
           <div className="slider"></div>
         </div>
+        <p>Monthly</p>
         
       </div>
     </header>
