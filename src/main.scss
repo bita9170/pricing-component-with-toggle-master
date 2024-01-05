@@ -25,70 +25,109 @@ body {
   background-repeat: no-repeat;
   background-position: top -20px right -180px;
   background-color: var(--clr-verylightgrayishblue);
+  font-family: var(--ff-sans);
 }
 
 header {
- h1 {
-   color: var(--clr-DarkGrayishBlue);
-   text-align: center;
-   margin: 2rem 0;
- }
- .toggle-container {
+  h1 {
+    color: var(--clr-grayishblue);
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .toggle-container p {
+      margin: 0px;
+    }
+
+    p {
+      color: var(--clr-LightGrayishBlue);
+      font-size: var(--fs-500);
+      font-weight: var(--fw-bold);
+    }
+
+    .toggle-button {
+      width: 50px;
+      height: 25px;
+      background-color: var(--clr-LightGrayishBlue);
+      margin: 25px;
+      border-radius: 12.5px;
+      position: relative;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .slider {
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 2.5px;
+      left: 2.5px;
+      transition: transform 0.3s;
+    }
+
+    .toggle-button.on {
+      background-color: hsl(236, 72%, 79%);
+    }
+
+    .toggle-button.on .slider {
+      transform: translateX(25px);
+    }
+
+    .toggle-button.off {
+      background-color: hsl(237, 63%, 64%);
+    }
+
+    .toggle-button.off .slider {
+      transform: translateX(0);
+    }
+  }
+}
+
+main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 2rem 0;
 
-  
-  .toggle-container p {
-    margin: 0px;
+  .card-container {
+    width: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px;
   }
-
- p {
-    color: var(--clr-grayishblue);
+  h1 {
+    color: var(--clr-DarkGrayishBlue);
+    margin: 30px;
+    text-align: center;
+  }
+  button {
+    width: 80%;
+    padding: 0.7rem;
+    margin: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(237, 63%, 64%);
+    color: #fff;
     font-size: var(--fs-500);
     font-weight: var(--fw-bold);
- }
 
-  .toggle-button {
-    width: 50px;
-    height: 25px;
-    background-color: var(--clr-LightGrayishBlue);
-    margin: 25px ;
-    border-radius: 12.5px;
-    position: relative;
     cursor: pointer;
     transition: background-color 0.3s;
   }
-  
-  .slider {
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 2.5px;
-    left: 2.5px;
-    transition: transform 0.3s;
-  }
-  
-  .toggle-button.on {
-    background-color: hsl(236, 72%, 79%);
-  }
-  
-  .toggle-button.on .slider {
-    transform: translateX(25px);
-  }
-  
-  .toggle-button.off {
-    background-color: hsl(237, 63%, 64%);
-  }
-  
-  .toggle-button.off .slider {
-    transform: translateX(0);
-  }
-}
- 
 
-
-
+  .card-container h2,
+  .card-container p {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-bold);
+    color: var(--clr-grayishblue);
+    margin: 30px;
+    text-align: center;
+  }
 }
