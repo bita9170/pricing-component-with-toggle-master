@@ -107,8 +107,8 @@ main {
     background-color: #fff;
     border-radius: 10px;
     margin: 10px;
-    
   }
+
   h1 {
     color: var(--clr-DarkGrayishBlue);
     margin: 30px;
@@ -127,7 +127,6 @@ main {
     color: #fff;
     font-size: var(--fs-500);
     font-weight: var(--fw-bold);
-
     cursor: pointer;
     transition: background-color 0.3s;
   }
@@ -139,15 +138,14 @@ main {
     color: var(--clr-grayishblue);
     margin: 30px;
     text-align: center;
-    
   }
+
   .card-container h1,
   .card-container p,
   .card-container button {
     text-align: center;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--clr-LightGrayishBlue);
-
   }
 
   .card-container:nth-child(2) {
