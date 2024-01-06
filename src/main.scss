@@ -25,11 +25,12 @@
 }
 
 body {
-  background-image: url("./assets/images/bg-top.svg");
-  background-repeat: no-repeat;
+  background-image: url("./assets/images/bg-top.svg"), url("./assets/images/bg-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
   background-position: top -20px right -180px;
   background-color: var(--clr-verylightgrayishblue);
   font-family: var(--ff-sans);
+  background-position: top right, bottom -180px left;
 }
 
 header {
