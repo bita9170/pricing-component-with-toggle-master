@@ -9,7 +9,11 @@
   --clr-LightGrayishBlue: hsl(234, 14%, 74%);
   --clr-grayishblue: hsl(233, 13%, 49%);
   --clr-DarkGrayishBlue: hsl(232, 13%, 33%);
-  --clr-LinearGradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+  --clr-LinearGradient: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
 }
 
 *,
@@ -32,7 +36,7 @@ header {
   h1 {
     color: var(--clr-grayishblue);
     text-align: center;
-    margin: 2rem 0;
+    margin-top: 5rem;
   }
   .toggle-container {
     display: flex;
@@ -72,7 +76,7 @@ header {
     }
 
     .toggle-button.on {
-      background-color: hsl(236, 72%, 79%);
+      background: var(--clr-LinearGradient);
     }
 
     .toggle-button.on .slider {
@@ -80,7 +84,7 @@ header {
     }
 
     .toggle-button.off {
-      background-color: hsl(237, 63%, 64%);
+      background: var(--clr-LinearGradient);
     }
 
     .toggle-button.off .slider {
@@ -98,22 +102,28 @@ main {
 
   .card-container {
     width: 50%;
+    max-width: 340px;
+    height: 500px;
     background-color: #fff;
     border-radius: 10px;
     margin: 10px;
+    
   }
   h1 {
     color: var(--clr-DarkGrayishBlue);
     margin: 30px;
     text-align: center;
+    font-size: 50px;
   }
+
   button {
     width: 80%;
     padding: 0.7rem;
+    align-self: center;
     margin: 30px;
     border-radius: 5px;
     border: none;
-    background-color: hsl(237, 63%, 64%);
+    background: var(--clr-LinearGradient);
     color: #fff;
     font-size: var(--fs-500);
     font-weight: var(--fw-bold);
@@ -129,5 +139,47 @@ main {
     color: var(--clr-grayishblue);
     margin: 30px;
     text-align: center;
+    
+  }
+  .card-container h1,
+  .card-container p,
+  .card-container button {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--clr-LightGrayishBlue);
+
+  }
+
+  .card-container:nth-child(2) {
+    background: var(--clr-LinearGradient);
+    h1 {
+      color: #fff;
+    }
+    h2 {
+      color: #fff;
+    }
+    p {
+      color: #fff;
+    }
+    button {
+      color: hsl(237, 63%, 64%);
+      background: #fff;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+
+    .card-container {
+      margin: 0;
+    }
+    .card-container:nth-child(2) {
+      height: 550px;
+      button {
+        margin: 54px 35px 35px;
+      }
+    }
   }
 }
