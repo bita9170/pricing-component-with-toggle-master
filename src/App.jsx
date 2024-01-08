@@ -33,7 +33,7 @@ function App() {
           <p>500 GB Storage</p>
           <p>2 Users Allowed</p>
           <p>Send up to 3 GB</p>
-          <button>LEARN MORE</button>
+          <button className="btn btn-primary">LEARN MORE</button>
         </div>
 
         <div className="card-container">
@@ -42,7 +42,7 @@ function App() {
           <p>1 TB Storage</p>
           <p>5 Users Allowed</p>
           <p>Send up to 10 GB</p>
-          <button>LEARN MORE</button>
+          <button className="btn btn-secondary">LEARN MORE</button>
         </div>
 
         <div className="card-container">
@@ -51,7 +51,7 @@ function App() {
           <p>2 TB Storage</p>
           <p>10 Users Allowed</p>
           <p>Send up to 20 GB</p>
-          <button>LEARN MORE</button>
+          <button className="btn btn-primary">LEARN MORE</button>
         </div>
       </main>
     </>
